@@ -1,0 +1,12 @@
+name: LevelUp
+markdown: redcarpet
+safe: false
+port: 4000
+pygments: true
+destination: ./_site
+plugins: ./_plugins
+exclude: [config.ru, Gemfile, Gemfile.lock, Procfile, Rakefile, vendor]
+sass:
+    style: expanded
+    deploy_style: compressed
+    compile_in_place: false
