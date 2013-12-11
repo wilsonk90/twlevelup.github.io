@@ -1,0 +1,32 @@
+body {
+  font-family: 'open sans';
+}
+
+.content {
+  margin: 0 auto;
+  width: 1000px;
+}
+
+.profile {
+  float: left;
+  text-align: center;
+  width: 330px;
+}
+
+.profile .quote{
+  border: 1px solid #f3f3f3;
+  padding: 10px;
+  margin: 0 auto;
+  text-align: center;
+  width: 200px;
+}
+
+.profile small {
+  display: inline-block;
+  padding-top: 10px;
+}
+
+.profile img{
+  border-radius: 100%;
+  width: 120px;
+}
