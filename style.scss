@@ -80,7 +80,6 @@ body {
 
 section.content {
   padding: 20px 0;
-  text-align: center;
   width: 100%;
   margin: 0 auto;
   max-width: 1000px;
@@ -100,18 +99,21 @@ section.content {
 
 .profile {
   float: left;
-  text-align: center;
-  width: 330px;
+  width: 33%;
+  padding: 10px;
+  text-align: left;
 
   .quote{
+    $quote-background-color: #f6f9fa;
+    $quote-highlight-color: darken($quote-background-color, 15%);
+
     position: relative;
-    background-color: #f6f9fa;
-    box-shadow: 0 3px 0 #dce8ed;
+    background-color: $quote-background-color;
+    box-shadow: 0 3px 0 $quote-highlight-color;
     border-radius: 10px;
-    padding: 20px 15px;
+    padding: 15px 25px;
     margin: 0 auto;
-    text-align: center;
-    width: 200px;
+    width: 100%;
 
     &:before {
       content: "";
@@ -121,7 +123,7 @@ section.content {
       border: solid 18px;
       left: 20px;
       bottom: -36px;
-      border-color: #dce8ed transparent transparent transparent;
+      border-color: $quote-highlight-color transparent transparent transparent;
     }
 
     &:after {
@@ -132,21 +134,37 @@ section.content {
       border: solid 14px;
       left: 24px;
       bottom: -28px;
-      border-color: #f6f9fa transparent transparent transparent;
+      border-color: $quote-background-color transparent transparent transparent;
     }
   }
 
-  small {
-    color: #5c5c5c;
-    display: inline-block;
-    padding-top: 10px;
-  }
+  .who {
+    padding-top: 25px;
 
-  img{
-    border: 1px solid #c5c5c5;
-    border-radius: 100%;
-    margin-top: 15px;
-    width: 120px;
+    .name, .twitter {
+      margin-left: 70px;
+      margin-bottom: 5px;
+
+      a {
+        color: #6DBCDB;
+        text-decoration: none;
+      }
+    }
+
+    .name {
+      font-weight: bold;
+    }
+
+    .twitter {
+      font-size: 0.8em;
+    }
+
+    .avatar {
+      float: left;
+      border-radius: 100%;
+      margin-left: 18px;
+      width: 40px;
+    }
   }
 }
 
