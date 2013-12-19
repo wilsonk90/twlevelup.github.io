@@ -20,8 +20,8 @@ body {
     background: url(./assets/callout.jpg);
     background-size: cover;
     background-position: center;
-    filter: blur(3px) sepia(0.2) contrast(1.1);
-    -webkit-filter: blur(3px) sepia(0.2) contrast(1.1);
+    filter: blur(3px) sepia(0.6) contrast(1.1);
+    -webkit-filter: blur(3px) sepia(0.6) contrast(1.1);
     top: -15px;
     left: -15px;
     right: -15px;
@@ -38,10 +38,22 @@ body {
       display: table-cell;
       vertical-align: middle;
       color: white;
-      font-size: 60px;
       text-shadow: 0 0 5px rgba(#333, 0.8);
-      text-transform: uppercase;
       text-align: center;
+
+      h2, h3 {
+        margin: 0;
+      }
+
+      h3 {
+        font-size: 50px;
+        font-weight: 200;
+      }
+
+      h2 {
+        font-family: "HelveticaNeue-CondensedBlack", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-size: 80px;
+      }
     }
   }
 }
@@ -75,7 +87,7 @@ body {
   overflow: hidden;
 }
 
-.section {
+section {
   text-align: center;
   padding: 20px 0;
   width: 100%;
