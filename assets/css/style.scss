@@ -45,7 +45,7 @@ body {
   &:before {
     content: "";
     position: absolute;
-    background: url(./assets/images/callout.jpg);
+    background: url(../images/callout.jpg);
     background-size: cover;
     background-position: center;
     -webkit-filter: blur(3px) sepia(0.2) contrast(1.1);
