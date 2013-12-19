@@ -2,6 +2,8 @@
   box-sizing: border-box;
 }
 
+$navbar-height: 80px;
+
 body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
@@ -38,7 +40,8 @@ body {
 }
 
 .callout {
-  height: 600px;
+  margin-top: $navbar-height;
+  height: 620px;
   position: relative;
   overflow: hidden;
 
@@ -70,6 +73,10 @@ body {
       .button {
         margin-top: 40px;
         font-size: 25px;
+
+        .fa {
+          margin-left: 5px;
+        }
       }
 
       h2, h3 {
@@ -108,11 +115,11 @@ body {
 }
 
 .navbar {
+  box-shadow: 0 0 5px rgba(#333, 0.3);
   background: white;
-  border-bottom: 1px #c5c5c5 solid;
   position: fixed;
   padding: 10px;
-  height: 80px;
+  height: $navbar-height;
   text-align: center;
   top: 0px;
   width: 100%;
