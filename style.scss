@@ -47,20 +47,17 @@ body {
 }
 
 .event {
-  border-left: 1px solid #c5c5c5;
-  max-width: 300px;
-
   .location {
-    font-size: 2em;
+    font-size: 1.4em;
   }
 
   .name {
-    font-size: 1.2em;
+    font-size: 1.8em;
     color: #333;
   }
 
   .date {
-    font-size: 1em;
+    font-size: 0.9em;
     padding-top: 10px;
   }
 }
@@ -78,7 +75,8 @@ body {
   overflow: hidden;
 }
 
-section.content {
+.section {
+  text-align: center;
   padding: 20px 0;
   width: 100%;
   margin: 0 auto;
@@ -86,16 +84,10 @@ section.content {
   width: 100%;
 
   h2 {
-
+    font-size: 42px;
+    font-weight: 100;
   }
 }
-
-.border-line {
-  border: 4px #f7ef34 solid;
-  margin: 30px auto 35px auto;
-  max-width: 400px;
-}
-
 
 .profile {
   float: left;
