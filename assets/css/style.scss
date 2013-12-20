@@ -59,42 +59,76 @@ body {
     bottom: -15px;
     z-index: -1;
   }
+}
 
-  .tagline-container {
-    display: table;
-    height: 100%;
-    width: 100%;
+@-webkit-keyframes bounce {
+  $bounce-amount: 2px;
 
-    .tagline {
-      display: table-cell;
-      vertical-align: middle;
-      text-align: center;
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
 
-      .button {
-        margin-top: 40px;
-        margin-bottom: 40px;
-        font-size: 25px;
+  25% {
+    -webkit-transform: translateY(-$bounce-amount);
+    transform: translateY(-$bounce-amount);
+  }
 
-        .fa {
-          margin-left: 5px;
-        }
-      }
+  50% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
 
-      h2, h3 {
-        margin: 0;
-        color: white;
-        text-shadow: 0 0 5px rgba(#333, 0.8);
-      }
+  75% {
+    -webkit-transform: translateY($bounce-amount);
+    transform: translateY($bounce-amount);
+  }
 
-      h3 {
-        font-size: 50px;
-        font-weight: 200;
-      }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
 
-      h2 {
-        font-family: "HelveticaNeue-CondensedBlack", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-        font-size: 80px;
-      }
+.tagline-container {
+  display: table;
+  height: 100%;
+  width: 100%;
+
+  .button {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 25px;
+
+    .fa {
+      margin-left: 5px;
+    }
+
+    &:hover .fa {
+      -webkit-animation: bounce 500ms 2;
+      animation: bounce 500ms infinite;
+    }
+  }
+
+  .tagline {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+
+    h2, h3 {
+      margin: 0;
+      color: white;
+      text-shadow: 0 0 5px rgba(#333, 0.8);
+    }
+
+    h3 {
+      font-size: 50px;
+      font-weight: 200;
+    }
+
+    h2 {
+      font-family: "HelveticaNeue-CondensedBlack", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-size: 80px;
     }
   }
 }
