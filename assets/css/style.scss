@@ -7,6 +7,7 @@ $pad-screen: "only screen and (max-width: #{$screen-medium})";
 $large-screen: "only screen and (min-width: #{$screen-large})";
 
 * {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -217,8 +218,8 @@ section {
   margin: 0 auto;
 
   @media #{$large-screen} {
-    float: left;
-    width: 33%;
+    display: inline-block;
+    width: 30%;
   }
 
   .quote {
