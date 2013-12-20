@@ -48,6 +48,15 @@ body {
   }
 }
 
+.button-info {
+  $info-button-color: #289DE1;
+  background-color: $info-button-color;
+
+  &:hover {
+    background-color: darken($info-button-color, 5%);
+  }
+}
+
 .callout {
   margin-top: $navbar-height;
   height: 620px;
@@ -64,8 +73,12 @@ body {
     background: url(../images/callout.jpg);
     background-size: cover;
     background-position: center;
+
+    // TODO: Pre-process the image since firefox and IE don't support filter
+    // yet.
     -webkit-filter: blur(3px) sepia(0.2) contrast(1.1);
     filter: blur(3px) sepia(0.2) contrast(1.1);
+
     top: -15px;
     left: -15px;
     right: -15px;
@@ -183,17 +196,37 @@ body {
   }
 }
 
-.navbar {
+#navbar {
   box-shadow: 0 0 5px rgba(#333, 0.3);
   background: white;
   position: fixed;
   padding: 10px;
   height: $navbar-height;
-  text-align: center;
   top: 0px;
   width: 100%;
   z-index: 1;
   overflow: hidden;
+
+  .navbar-internal {
+    margin: 0 auto;
+    max-width: $screen-large;
+  }
+
+  .navbar-items {
+    float: right;
+    list-style-type: none;
+
+    li {
+      display: inline-block;
+      font-size: 20px;
+      margin-left: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #666;
+    }
+  }
 }
 
 section {
@@ -287,3 +320,10 @@ section {
   }
 }
 
+#upcoming {
+  .button-info {
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}

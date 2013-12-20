@@ -2,9 +2,19 @@
 layout: default
 ---
 
-%header.navbar
-  .content
+%header#navbar
+  .navbar-internal
     %img(src="./assets/images/logo.png")
+
+    %ul.navbar-items
+      %li
+        %a{href: "#"} Home
+
+      %li
+        %a{href: "#"} About
+
+      %li
+        %a{href: "#"} Upcoming Events
 
 %header.callout
   .tagline-container
@@ -29,6 +39,8 @@ layout: default
       Sydney
     .date
       6th December 2013, 6 - 9pm
+
+    %a.button.button-info{href: "#"} Apply
 
 %section#testimonials
   %h2 Real Stories
