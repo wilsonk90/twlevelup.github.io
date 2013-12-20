@@ -1,3 +1,11 @@
+$screen-small: 320px;
+$screen-medium: 768px;
+$screen-large: 960px;
+
+$phone-screen: "only screen and (max-width: #{$screen-small})";
+$pad-screen: "only screen and (max-width: #{$screen-medium})";
+$large-screen: "only screen and (min-width: #{$screen-large})";
+
 * {
   box-sizing: border-box;
 }
@@ -44,6 +52,10 @@ body {
   height: 620px;
   position: relative;
   overflow: hidden;
+
+  @media #{$phone-screen} {
+    height: 480px;
+  }
 
   &:before {
     content: "";
@@ -108,6 +120,11 @@ body {
       -webkit-animation: bounce 500ms 2;
       animation: bounce 500ms infinite;
     }
+
+    @media #{$phone-screen} {
+      margin-top: 20px;
+      font-size: 20px;
+    }
   }
 
   .tagline {
@@ -122,13 +139,29 @@ body {
     }
 
     h3 {
-      font-size: 50px;
       font-weight: 200;
+      font-size: 50px;
+
+      @media #{$pad-screen} {
+        font-size: 40px;
+      }
+
+      @media #{$phone-screen} {
+        font-size: 20px;
+      }
     }
 
     h2 {
       font-family: "HelveticaNeue-CondensedBlack", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
       font-size: 80px;
+
+      @media #{$pad-screen} {
+        font-size: 60px;
+      }
+
+      @media #{$phone-screen} {
+        font-size: 30px;
+      }
     }
   }
 }
@@ -167,7 +200,7 @@ section {
   padding: 20px 0;
   width: 100%;
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: $screen-large;
   width: 100%;
 
   h2 {
@@ -177,12 +210,18 @@ section {
 }
 
 .profile {
-  float: left;
-  width: 33%;
   padding: 10px;
   text-align: left;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
 
-  .quote{
+  @media #{$large-screen} {
+    float: left;
+    width: 33%;
+  }
+
+  .quote {
     $quote-background-color: #f6f9fa;
     $quote-highlight-color: darken($quote-background-color, 15%);
 
