@@ -4,85 +4,141 @@ layout: default
 
 %header#navbar
   .navbar-internal
-    %img(src="./assets/images/logo.png")
+    .content
+      %img{src: "./assets/glyph-logo.png"}
 
-    %ul.navbar-items
-      %li
-        %a{href: "#"} Home
+%section#header
+  %h1.boom Stop Studying, Start Doing
 
-      %li
-        %a{href: "#"} About
+  %form.get-updates
+    %input{name: "email", placeholder: "Sign up to hear about future events"}
+    %input{type: "submit", value: "Sign Up"}
 
-      %li
-        %a{href: "#"} Upcoming Events
+  %h3
+    Coding Education
+    %strong Beyond
+    the University
 
-%header.callout
-  .tagline-container
-    .tagline
-      %h3 From Student
-      %h2 To Professional
+  .border-line
 
-      %a.button.button-primary.scroll{href: "#about-us"}
-        Learn More
-        %i.fa.fa-arrow-down
+  %img.tw{src: "./assets/tw-logo.png"}
 
-%section#about-us
-  %h2 About Us
-
-%section#upcoming
+%section#upcoming-events
   %h2 Upcoming Events
+  .event
+    %h4.location Johannesburg
+    %h5.name Levelup
+    .register
+      %a.apply.button{href: "#registration-page"} Register Now
+    .date
+      12th January 2013, 6 - 9pm
 
   .event
-    .name
-      %a{href: "#"} LevelUp Bonus
-    .location
-      Sydney
+    %h4.location Melbourne
+    %h5.name Levelup EXP
+    .register
+      %a.apply.button{href: "#registration-page"} Register Now
     .date
-      6th December 2013, 6 - 9pm
+      12th January 2013, 6 - 9pm
 
-    %a.button.button-info{href: "#"} Apply
+  .event
+    %h4.location Sydney
+    %h5.name Levelup 3
+    .register
+      %a.apply.button{href: "#registration-page"} Register Now
+    .date
+      12th January 2013, 6 - 9pm
 
-%section#testimonials
+  %div
+    %a{href: "#past-events"} See past events
+
+%section#about
+  %h2 About LevelUp
+
+  %p
+    We're passionate about software and we're revolutionizing software
+    education around the world.
+
+  %p
+    University students graduate every year, entering the workforce often
+    unprepared for what they'll encounter. LevelUp brings together computer
+    science and information technology students with software engineers,
+    authors, and visionaries to discuss how best to design, manage, and build
+    software projects.
+
+  %img.earth-line{src: "./assets/map.png"}
+
+%section#testimonials.alt
   %h2 Real Stories
-  .profile
-    %blockquote.quote
-      "I felt like I was light years ahead of where I would have been."
 
-    .who
-      %img.avatar(src="./assets/images/man.jpg")
-
-      .name
-        %a{href: "#"}
-          Sam
-          %span.location (Sydney)
-
-      .twitter
-        %a{href: "#"} @capnkrump
+  .border-line
 
   .profile
-    %blockquote.quote
+    .quote
       "I felt like I was light years ahead of where I would have been."
-    .who
-      %img.avatar(src="./assets/images/tholang.jpg")
 
-      .name
-        %a{href: "#"}
-          Tholang
-          %span.location (Johannesburg)
+      %small Business Analyst, Accenture
 
-      .twitter
-        %a{href: "#"} @tholangTHEBEST
+      .person Bruce
+
+    %img{src: "./assets/man.jpg"}
 
   .profile
-    %blockquote.quote
-      "I felt like I was light years ahead of where I would have been."
-    .who
-      %img.avatar(src="./assets/images/man.jpg")
+    .quote
+      "LevelUp prepared me for the workplace by filling in the things that
+      University left out. I got to participate in a real project, and get real
+      experience!"
 
-      .name
-        %a{href: "#"}
-          James Kirk
-          %span.location (Melbourne)
+      %small Software Engineer, Google
 
-      .twitter
-        %a{href: "#"} @melbournecafe
+      .person Tholang
+
+    %img{src: "./assets/tholang.jpg"}
+
+  .profile
+    .quote
+      "I learned more in nine weeks at LevelUp than I did in any of my classes."
+
+      %small Developer Consultant, ThoughtWorks
+
+      .person Sam
+
+    %img{src: "./assets/tholang.jpg"}
+
+%section#photos
+  %h2 Real Experience
+
+  .border-line
+
+  %img.large{src: './assets/photos/9.jpg'}
+  %img.small{src: './assets/photos/3.jpg'}
+  %img.small{src: './assets/photos/4.jpg'}
+  %img.large{src: './assets/photos/7.jpg'}
+  %img.small{src: './assets/photos/10.jpg'}
+  %img.small{src: './assets/photos/5.jpg'}
+  %img.small{src: './assets/photos/2.jpg'}
+  %img.large{src: './assets/photos/8.jpg'}
+  %img.small{src: './assets/photos/6.jpg'}
+  %img.small{src: './assets/photos/1.jpg'}
+
+  .clearfix
+
+%footer#beard
+  %div
+    %img.mascot{src: './assets/mascot.png'}
+  %div
+    %img.tw{src: './assets/tw-logo.png'}
+
+  %p
+    Are you passionate about world-changing software?
+
+    %a{href: 'http://www.thoughtworks.com/join'} We're hiring.
+    Read more about us at
+    %a{href: 'http://www.thoughtworks.com/'} thoughtworks.com
+
+  .social-links
+    %a{href: "https://twitter.com/TW_LevelUp"}
+      .fa.fa-twitter
+    %a{href: "https://www.facebook.com/ThoughtworksLevelUp"}
+      .fa.fa-facebook
+

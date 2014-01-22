@@ -2,6 +2,9 @@ $screen-small: 320px;
 $screen-medium: 768px;
 $screen-large: 960px;
 
+$primary-button-color: #f61f62;
+$link-color: #f61f62;
+
 $phone-screen: "only screen and (max-width: #{$screen-small})";
 $pad-screen: "only screen and (max-width: #{$screen-medium})";
 $large-screen: "only screen and (min-width: #{$screen-large})";
@@ -20,310 +23,185 @@ body {
   margin: 0;
 }
 
-.button {
-  -webkit-transition: background 200ms, color 200ms;
-  -moz-transition: background 200ms, color 200ms;
-  transition: background 200ms, color 200ms;
+a {
+  color: $link-color;
+  text-decoration: none;
 
+  &:hover {
+    color: darken($link-color, 15%);
+  }
+}
+
+h2 {
+  font-size: 2em;
+}
+
+section, footer, header {
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  max-width: $screen-large;
+  margin: 0 auto;
+}
+
+.tw {
+  max-width: 300px;
+}
+
+.border-line {
+  border: 4px #f7ef34 solid;
+  margin: 30px auto 35px auto;
+  max-width: 400px;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.button {
   display: inline-block;
+  font-weight: normal;
   padding: 0.55em 1.5em;
   padding-bottom: 0.75em;
   border: 0;
   border-radius: 5px;
-  background-color: #34495e;
+  background-color: $primary-button-color;
   box-shadow: inset 0 -5px 0 rgba(0,0,0,0.1);
   color: white;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
-}
-
-.button-primary {
-  $primary-button-color: #4DCA6A;
-  background-color: $primary-button-color;
 
   &:hover {
-    background-color: darken($primary-button-color, 5%);
+    background-color: lighten($primary-button-color, 10%);
   }
 }
 
-.button-info {
-  $info-button-color: #289DE1;
-  background-color: $info-button-color;
-
-  &:hover {
-    background-color: darken($info-button-color, 5%);
-  }
+#header h1.boom {
+  color: #464646;
+  font-size: 3em;
+  font-weight: 300;
 }
 
-.callout {
-  margin-top: $navbar-height;
-  height: 620px;
-  position: relative;
-  overflow: hidden;
-
-  @media #{$phone-screen} {
-    height: 480px;
+section#photos {
+  img {
+    float: left;
+    margin: 0 1.5% 3% 1.5%;
+    overflow: hidden;
   }
 
-  &:before {
-    content: "";
-    position: absolute;
-    background: url(../images/callout.jpg);
-    background-size: cover;
-    background-position: center;
-
-    // TODO: Pre-process the image since firefox and IE don't support filter
-    // yet.
-    -webkit-filter: blur(3px) sepia(0.2) contrast(1.1);
-    filter: blur(3px) sepia(0.2) contrast(1.1);
-
-    top: -15px;
-    left: -15px;
-    right: -15px;
-    bottom: -15px;
-    z-index: -1;
-  }
-}
-
-@-webkit-keyframes bounce {
-  $bounce-amount: 2px;
-
-  0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  25% {
-    -webkit-transform: translateY(-$bounce-amount);
-    transform: translateY(-$bounce-amount);
-  }
-
-  50% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  75% {
-    -webkit-transform: translateY($bounce-amount);
-    transform: translateY($bounce-amount);
-  }
-
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
-.tagline-container {
-  display: table;
-  height: 100%;
-  width: 100%;
-
-  .button {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    font-size: 25px;
-
-    .fa {
-      margin-left: 5px;
-    }
-
-    &:hover .fa {
-      -webkit-animation: bounce 500ms 2;
-      animation: bounce 500ms infinite;
-    }
-
-    @media #{$phone-screen} {
-      margin-top: 20px;
-      font-size: 20px;
-    }
-  }
-
-  .tagline {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-
-    h2, h3 {
-      margin: 0;
-      color: white;
-      text-shadow: 0 0 5px rgba(#333, 0.8);
-    }
-
-    h3 {
-      font-weight: 200;
-      font-size: 50px;
-
-      @media #{$pad-screen} {
-        font-size: 40px;
-      }
-
-      @media #{$phone-screen} {
-        font-size: 20px;
-      }
-    }
-
-    h2 {
-      font-family: "HelveticaNeue-CondensedBlack", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-      font-size: 80px;
-
-      @media #{$pad-screen} {
-        font-size: 60px;
-      }
-
-      @media #{$phone-screen} {
-        font-size: 30px;
-      }
-    }
-  }
-}
-
-.event {
-  .location {
-    font-size: 1.4em;
-  }
-
-  .name {
-    font-size: 1.8em;
-    color: #333;
-  }
-
-  .date {
-    font-size: 0.9em;
-    padding-top: 10px;
-  }
-}
-
-#navbar {
-  box-shadow: 0 0 5px rgba(#333, 0.3);
-  background: white;
-  position: fixed;
-  padding: 10px;
-  height: $navbar-height;
-  top: 0px;
-  width: 100%;
-  z-index: 1;
-  overflow: hidden;
-
-  .navbar-internal {
-    margin: 0 auto;
-    max-width: $screen-large;
-  }
-
-  .navbar-items {
-    float: right;
-    list-style-type: none;
-
-    li {
-      display: inline-block;
-      font-size: 20px;
-      margin-left: 20px;
-    }
-
-    a {
-      text-decoration: none;
-      color: #666;
-    }
-  }
-}
-
-section {
-  text-align: center;
-  padding: 20px 0;
-  width: 100%;
-  margin: 0 auto;
-  max-width: $screen-large;
-  width: 100%;
-
-  h2 {
-    font-size: 42px;
-    font-weight: 100;
-  }
-}
-
-.profile {
-  padding: 10px;
-  text-align: left;
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
-
-  @media #{$large-screen} {
-    display: inline-block;
+  img.small {
     width: 30%;
   }
 
-  .quote {
-    $quote-background-color: #f6f9fa;
-    $quote-highlight-color: darken($quote-background-color, 15%);
-
-    position: relative;
-    background-color: $quote-background-color;
-    box-shadow: 0 3px 0 $quote-highlight-color;
-    border-radius: 10px;
-    padding: 15px 25px;
-    margin: 0 auto;
-    width: 100%;
-
-    &:before {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 0;
-      border: solid 18px;
-      left: 20px;
-      bottom: -36px;
-      border-color: $quote-highlight-color transparent transparent transparent;
-    }
-
-    &:after {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 0;
-      border: solid 14px;
-      left: 24px;
-      bottom: -28px;
-      border-color: $quote-background-color transparent transparent transparent;
-    }
+  img.large {
+    width: 60%;
   }
+}
 
-  .who {
-    padding-top: 25px;
+section#upcoming-events {
+  .event {
+    border-left: 1px solid #c5c5c5;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 30px 0;
+    width: 300px;
 
-    .name, .twitter {
-      margin-left: 70px;
-      margin-bottom: 5px;
+    &:nth-of-type(1) {
+      border-left: none;
+    }
 
-      a {
-        color: #6DBCDB;
-        text-decoration: none;
-      }
+    .location, .name {
+      margin: 0;
+    }
+
+    .location {
+      font-size: 2em;
+      font-weight: 300;
     }
 
     .name {
-      font-weight: bold;
+      font-size: 1.2em;
+      font-weight: 300;
+      color: #333;
     }
 
-    .twitter {
-      font-size: 0.8em;
+    .register {
+      padding-top: 20px;
+      padding-bottom: 20px;
+
     }
 
-    .avatar {
-      float: left;
-      border-radius: 100%;
-      margin-left: 18px;
-      width: 40px;
+    .date {
+      font-size: 1em;
+    }
+
+    .apply {
+      color: white;
     }
   }
 }
 
-#upcoming {
-  .button-info {
-    margin-top: 20px;
-    text-transform: uppercase;
-    font-weight: bold;
+section#testimonials {
+  background: url(./assets/bg.png) repeat;
+  box-sizing: border-box;
+  margin: 0;
+  max-width: 100%;
+  padding: 20px;
+  width: 100%;
+
+  .border-line {
+    border: 4px #f61f62 solid;
+    margin: 30px auto 35px auto;
+    max-width: 400px;
+  }
+
+  .profile {
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+
+    .quote {
+      background: #f3f3f3;
+      border: 1px solid white;
+      border-radius: 5px 0 5px 0;
+      padding: 14px 10px;
+      margin: 0 auto;
+      text-align: center;
+      width: 80%;
+    }
+
+    .person {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    small {
+      color: #5c5c5c;
+      display: inline-block;
+      padding-top: 10px;
+    }
+
+    img {
+      border: 1px solid #c5c5c5;
+      border-radius: 100%;
+      margin-top: 15px;
+      width: 120px;
+    }
+  }
+}
+
+#beard {
+  .mascot {
+    margin-bottom: 50px;
+  }
+
+  .social-links {
+    font-size: 3em;
+
+    a {
+      padding: 0 15px;
+    }
   }
 }
