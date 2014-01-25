@@ -58,6 +58,12 @@ section, footer, header {
   clear: both;
 }
 
+input {
+  padding: 6px;
+  border: 1px solid #464646;
+  border-radius: 5px;
+}
+
 .button {
   display: inline-block;
   font-weight: normal;
@@ -84,6 +90,7 @@ section, footer, header {
   font-weight: 300;
 }
 
+
 section#photos {
   img {
     float: left;
@@ -99,6 +106,7 @@ section#photos {
     width: 60%;
   }
 }
+
 
 section#upcoming-events {
   .event {
@@ -202,6 +210,71 @@ section#testimonials {
 
     a {
       padding: 0 15px;
+    }
+  }
+}
+
+
+
+#registration {
+  header#navbar .navbar-internal .content {
+    img {
+      height: 50px;
+    }
+  }
+  section#header {
+    h1.boom {
+      margin-top: 0;
+    }
+    form#register {
+      .form-group {
+        white-space: nowrap;
+        margin-bottom: 2px;
+        &.last {
+          margin-bottom: 10px;
+        }
+        label {
+          width: 100px;
+          display: inline-block;
+          text-align: right;
+        }
+      }
+    }
+  }
+  section#schedule {
+    .talk {
+      padding: 20px 0;
+      border-bottom: 1px solid #ccc;
+      &.last {
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+      }
+      .left, .right {
+        display: inline-block;
+        width: 30%;
+        vertical-align: top;
+      }
+      .right {
+        width: 60%;
+        text-align: left;
+      }
+      img {
+        border: 1px solid #c5c5c5;
+        border-radius: 100%;
+        margin-top: 15px;
+        width: 100px;
+      }
+      .title, .presenter {
+        margin: 0;
+        padding: 0;
+      }
+      .presenter {
+        font-weight: normal;
+        margin-bottom: 15px;
+      }
+      &.break {
+        color: darkgrey;
+      }
     }
   }
 }

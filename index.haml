@@ -10,9 +10,11 @@ layout: default
 %section#header
   %h1.boom Stop Studying, Start Doing
 
-  %form.get-updates
-    %input{name: "email", placeholder: "Sign up to hear about future events"}
-    %input{type: "submit", value: "Sign Up"}
+  %form#get-updates
+    %label
+      Sign up to hear about future events&nbsp;
+    %input{name: "email", placeholder: "you@email.com"}
+    %input.apply.button{type: "submit", value: "Sign Up"}
 
   %h3
     Coding Education
