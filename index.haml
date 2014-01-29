@@ -8,22 +8,32 @@ layout: default
       %img{src: "./assets/glyph-logo.png"}
 
 %section#header
-  %h1.boom Stop Studying, Start Doing
+  %h1.boom LevelUp Your Education
 
   %form#get-updates
-    %label
-      Sign up to hear about future events&nbsp;
-    %input{name: "email", placeholder: "you@email.com"}
-    %input.apply.button{type: "submit", value: "Sign Up"}
+    %h3 Register and be the first to hear about upcoming LevelUp events
 
-  %h3
-    Coding Education
-    %strong Beyond
-    the University
+    .details
+      %input.email{name: "email", placeholder: "Email Address"}
+      %input.sign-up.button.info-button{type: "submit", value: "Sign Up"}
 
-  .border-line
+%section#about.alt
+  .about-content
+    %h2 About LevelUp
 
-  %img.tw{src: "./assets/tw-logo.png"}
+    %p
+      LevelUp is a series of classes, and conferences for University students
+      who want to add to their classroom learning with real-world experience.
+      Topics range from test-driven development, continuous delivery, and pair
+      programming to agile project management, business analysis, and how
+      employers hire grads.
+
+    %p
+      LevelUp conferences are single day events, and LevelUp courses run 6-9
+      weeks, one day a week.
+      %strong
+        %em
+          Every LevelUp event is free. Forever.
 
 %section#upcoming-events
   %h2 Upcoming Events
@@ -54,23 +64,9 @@ layout: default
   %div
     %a{href: "#past-events"} See past events
 
-%section#about
-  %h2 About LevelUp
-
-  %p
-    We're passionate about software and we're revolutionizing software
-    education around the world.
-
-  %p
-    University students graduate every year, entering the workforce often
-    unprepared for what they'll encounter. LevelUp brings together computer
-    science and information technology students with software engineers,
-    authors, and visionaries to discuss how best to design, manage, and build
-    software projects.
-
   %img.earth-line{src: "./assets/map.png"}
 
-%section#testimonials.alt
+%section#testimonials
   %h2 Real Stories
 
   .border-line

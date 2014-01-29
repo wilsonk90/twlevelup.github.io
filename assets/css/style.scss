@@ -3,6 +3,8 @@ $screen-medium: 768px;
 $screen-large: 960px;
 
 $primary-button-color: #f61f62;
+$info-button-color: #6dbb6f;
+$input-border-color: #ddd;
 $link-color: #f61f62;
 
 $phone-screen: "only screen and (max-width: #{$screen-small})";
@@ -17,7 +19,7 @@ $large-screen: "only screen and (min-width: #{$screen-large})";
 $navbar-height: 80px;
 
 body {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   padding: 0;
   margin: 0;
@@ -34,6 +36,7 @@ a {
 
 h2 {
   font-size: 2em;
+  font-weight: 300;
 }
 
 section, footer, header {
@@ -59,9 +62,10 @@ section, footer, header {
 }
 
 input {
-  padding: 6px;
-  border: 1px solid #464646;
-  border-radius: 5px;
+  padding: 9px;
+  border: 1px solid $input-border-color;
+  border-radius: 3px;
+  font-weight: normal;
 }
 
 .button {
@@ -84,10 +88,60 @@ input {
   }
 }
 
+.info-button {
+  background-color: $info-button-color;
+
+  &:hover {
+    background-color: lighten($info-button-color, 10%);
+  }
+}
+
+.alt {
+  background: url(/assets/bg.png) repeat;
+}
+
 #header h1.boom {
   color: #464646;
   font-size: 3em;
   font-weight: 300;
+}
+
+#get-updates {
+  h3 {
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #999;
+  }
+
+  .details {
+    input {
+      font-size: 1em;
+    }
+
+    .button {
+      top: -2px;
+      position: relative;
+    }
+  }
+}
+
+section#about {
+  margin: 0;
+  max-width: 100%;
+  padding: 20px;
+  width: 100%;
+
+  .about-content {
+    max-width: $screen-medium;
+    margin: 0 auto;
+  }
+
+  p {
+    line-height: 1.6em;
+    font-weight: normal;
+    font-size: 1.2em;
+    margin-bottom: 55px;
+  }
 }
 
 
@@ -152,7 +206,6 @@ section#upcoming-events {
 }
 
 section#testimonials {
-  background: url(./assets/bg.png) repeat;
   box-sizing: border-box;
   margin: 0;
   max-width: 100%;
