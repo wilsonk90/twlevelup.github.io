@@ -1,4 +1,4 @@
-$screen-small: 320px;
+$screen-small: 360px;
 $screen-medium: 768px;
 $screen-large: 960px;
 
@@ -67,13 +67,6 @@ section, footer, header {
   clear: both;
 }
 
-input {
-  padding: 9px;
-  border: 1px solid $input-border-color;
-  border-radius: 3px;
-  font-weight: normal;
-}
-
 .button {
   display: inline-block;
   font-weight: normal;
@@ -123,6 +116,10 @@ h1.boom {
     @media #{$phone-screen} {
       padding: 10px;
       width: 100%;
+    }
+
+    .button {
+      display: inline-block;
     }
 
     .sign-up {
@@ -332,8 +329,14 @@ form {
     }
   }
 
+  input {
+    padding: 9px;
+    border: 1px solid $input-border-color;
+    border-radius: 3px;
+    font-weight: normal;
+  }
+
   .button {
-    display: block;
     font-size: 1.2em;
     margin: 15px auto;
 
