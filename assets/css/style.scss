@@ -52,9 +52,14 @@ section, footer, header {
 }
 
 .border-line {
-  border: 4px #f7ef34 solid;
+  border: 4px #f61f62 solid;
   margin: 30px auto 35px auto;
   max-width: 400px;
+
+  @media #{$phone-screen} {
+    width: 100%;
+    margin: 30px 0;
+  }
 }
 
 .clearfix {
@@ -114,11 +119,21 @@ input {
   }
 
   .details {
-    input {
-      font-size: 1em;
+    @media #{$phone-screen} {
+      padding: 10px;
+      width: 100%;
     }
 
-    .button {
+    input {
+      font-size: 1em;
+
+      @media #{$phone-screen} {
+        margin-top: 15px;
+        width: 100%;
+      }
+    }
+
+    .sign-up {
       top: -2px;
       position: relative;
     }
@@ -161,16 +176,16 @@ section#photos {
   }
 }
 
-
 section#upcoming-events {
   .event {
     border-left: 1px solid #c5c5c5;
     box-sizing: border-box;
     display: inline-block;
     margin: 30px 0;
-    width: 300px;
+    width: $pad-screen / 3;
+    padding: 0 30px;
 
-    &:nth-of-type(1) {
+    &:nth-of-type(2) {
       border-left: none;
     }
 
@@ -179,7 +194,7 @@ section#upcoming-events {
     }
 
     .location {
-      font-size: 2em;
+      font-size: 1.6em;
       font-weight: 300;
     }
 
@@ -197,10 +212,29 @@ section#upcoming-events {
 
     .date {
       font-size: 1em;
+      font-style: italic;
     }
 
     .apply {
       color: white;
+    }
+
+    @media #{$pad-screen} {
+      width: 100%;
+      float: none;
+      border-left: none;
+    }
+  }
+
+  .earth-line {
+    max-width: 500px;
+
+    @media #{$phone-screen} {
+      display: none;
+    }
+
+    @media #{$pad-screen} {
+      width: 100%;
     }
   }
 }
@@ -212,16 +246,16 @@ section#testimonials {
   padding: 20px;
   width: 100%;
 
-  .border-line {
-    border: 4px #f61f62 solid;
-    margin: 30px auto 35px auto;
-    max-width: 400px;
-  }
-
   .profile {
     display: inline-block;
     text-align: center;
     width: 30%;
+
+    @media #{$pad-screen} {
+      width: 100%;
+      display: block;
+      margin-bottom: 35px;
+    }
 
     .quote {
       background: #f3f3f3;
@@ -266,8 +300,6 @@ section#testimonials {
     }
   }
 }
-
-
 
 #registration {
   header#navbar .navbar-internal .content {
