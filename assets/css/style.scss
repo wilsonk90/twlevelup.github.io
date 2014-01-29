@@ -106,7 +106,7 @@ input {
   background: url(/assets/bg.png) repeat;
 }
 
-#header h1.boom {
+h1.boom {
   color: #464646;
   font-size: 3em;
   font-weight: 300;
@@ -123,15 +123,6 @@ input {
     @media #{$phone-screen} {
       padding: 10px;
       width: 100%;
-    }
-
-    input {
-      font-size: 1em;
-
-      @media #{$phone-screen} {
-        margin-top: 15px;
-        width: 100%;
-      }
     }
 
     .sign-up {
@@ -303,62 +294,104 @@ section#testimonials {
   }
 }
 
-#registration {
-  header#navbar .navbar-internal .content {
-    img {
-      height: 50px;
-    }
-  }
-  section#header {
-    h1.boom {
-      margin-top: 0;
-    }
-    form#register {
-      .form-group {
-        white-space: nowrap;
-        margin-bottom: 2px;
-        &.last {
-          margin-bottom: 10px;
-        }
-        label {
-          width: 100px;
-          display: inline-block;
-          text-align: right;
-        }
+
+form {
+  .form-group {
+    white-space: nowrap;
+    margin-bottom: 10px;
+
+    label {
+      font-size: 1.1em;
+      width: 140px;
+      margin-right: 20px;
+      display: inline-block;
+      text-align: right;
+
+      @media #{$phone-screen} {
+        text-align: left;
+        display: block;
+        margin-top: 15px;
+        width: 100%;
       }
     }
+
+    input {
+      max-width: 340px;
+      font-size: 1em;
+
+      @media #{$phone-screen} {
+        display: block;
+        margin-top: 15px;
+        width: 100%;
+      }
+    }
+
+    @media #{$phone-screen} {
+      padding: 0 15px;
+      width: 100%;
+    }
   }
+
+  .button {
+    display: block;
+    font-size: 1.2em;
+    margin: 15px auto;
+
+    @media #{$phone-screen} {
+      width: 100%;
+      margin-top: 25px;
+    }
+  }
+}
+
+#registration {
+  #register {
+    max-width: $screen-medium;
+
+    .description {
+      margin: 30px auto;
+      line-height: 1.5em;
+    }
+  }
+
   section#schedule {
     .talk {
       padding: 20px 0;
       border-bottom: 1px solid #ccc;
+
       &.last {
         padding-bottom: 40px;
         margin-bottom: 40px;
       }
+
       .left, .right {
         display: inline-block;
         width: 30%;
         vertical-align: top;
       }
+
       .right {
         width: 60%;
         text-align: left;
       }
+
       img {
         border: 1px solid #c5c5c5;
         border-radius: 100%;
         margin-top: 15px;
         width: 100px;
       }
+
       .title, .presenter {
         margin: 0;
         padding: 0;
       }
+
       .presenter {
         font-weight: normal;
         margin-bottom: 15px;
       }
+
       &.break {
         color: darkgrey;
       }

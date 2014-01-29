@@ -8,29 +8,41 @@ layout: default
       .content
         %img{src: "./assets/glyph-logo.png"}
 
-  %section#header
+  %section#register
     %h1.boom Sydney LevelUp 3
-
-    %form#register
-      %p Free conference event for IT students. Seat limited. &nbsp;
-      .form-group
-        %label First Name &nbsp;
-        %input{name: "email", placeholder: "Your Name"}
-      .form-group
-        %label Last Name &nbsp;
-        %input{name: "email", placeholder: "Your Surname"}
-      .form-group.last
-        %label Email &nbsp;
-        %input{name: "email", placeholder: "you@email.com"}
-      %input.apply.button{type: "submit", value: "Sign Up"}
 
     %h3
       11th January, 2014 at
       %a{href: "www.google.com"} ThoughtWorks Braamfontein
 
+    %form
+      %p.description
+        LevelUp 3 is our biggest conference yet. Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Maecenas ut ligula iaculis quam auctor
+        tincidunt eu nec mi.  Class aptent taciti sociosqu ad litora torquent
+        per conubia nostra, per inceptos himenaeos. Nunc sodales dignissim
+        egestas. Nulla facilisi. Praesent lectus nunc
+
+      .form-group
+        %label First Name
+        %input{name: "email", placeholder: "Your Name"}
+
+      .form-group
+        %label Last Name
+        %input{name: "email", placeholder: "Your Surname"}
+
+      .form-group
+        %label Email
+        %input{name: "email", placeholder: "Your Email"}
+
+      .form-group
+        %input.button{type: "submit", value: "Register"}
+
   %section#schedule
-    %h2 Conference Schedule
+    %h2 Schedule
+
     .border-line
+
     .talk
       .left
         .time 10.00AM
@@ -38,7 +50,13 @@ layout: default
       .right
         %h3.title The Whole Design Yard
         %h5.presenter Pete Chemsripong
-        .description Come check out Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut ligula iaculis quam auctor tincidunt eu nec mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc sodales dignissim egestas. Nulla facilisi. Praesent lectus nunc
+        .description
+          Come check out Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit. Maecenas ut ligula iaculis quam auctor tincidunt eu nec mi.
+          Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+          per inceptos himenaeos. Nunc sodales dignissim egestas. Nulla
+          facilisi. Praesent lectus nunc
+
     .talk
       .left
         .time 11.00AM
@@ -46,13 +64,20 @@ layout: default
       .right
         %h3.title Advance Agile
         %h5.presenter Sam Gibson
-        .description Proin nec rutrum neque. Nam gravida lorem sit amet ipsum rutrum, eu tincidunt enim posuere. Fusce nec lacinia elit. Mauris volutpat leo eget ante dignissim vulputate. Ut venenatis arcu eu turpis commodo
+        .description
+          Proin nec rutrum neque. Nam gravida lorem sit amet ipsum rutrum, eu
+          tincidunt enim posuere. Fusce nec lacinia elit. Mauris volutpat leo
+          eget ante dignissim vulputate. Ut venenatis arcu eu turpis commodo
+
     .talk.break
       .left
         .time 11.00AM
       .right
         %h3.title Lunch
-        .description Treat yourself to pear and blueberry tea cake, mini danish pastries and chocolate and raspberry brownies. You deserve it!
+        .description
+          Treat yourself to pear and blueberry tea cake, mini danish pastries
+          and chocolate and raspberry brownies. You deserve it!
+
     .talk.last
       .left
         .time 1.00AM
@@ -60,27 +85,13 @@ layout: default
       .right
         %h3.title The Whole Design Yard
         %h5.presenter Pete Chemsripong
-        .description Come check out Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut ligula iaculis quam auctor tincidunt eu nec mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc sodales dignissim egestas. Nulla facilisi. Praesent lectus nunc
+        .description
+          Come check out Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit. Maecenas ut ligula iaculis quam auctor tincidunt eu nec mi.
+          Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+          per inceptos himenaeos. Nunc sodales dignissim egestas. Nulla
+          facilisi. Praesent lectus nunc
 
 
     .clearfix
-
-  %footer#beard
-    %div
-      %img.mascot{src: './assets/mascot.png'}
-    %div
-      %img.tw{src: './assets/tw-logo.png'}
-
-    %p
-      Are you passionate about world-changing software?
-
-      %a{href: 'http://www.thoughtworks.com/join'} We're hiring.
-      Read more about us at
-      %a{href: 'http://www.thoughtworks.com/'} thoughtworks.com
-
-    .social-links
-      %a{href: "https://twitter.com/TW_LevelUp"}
-        .fa.fa-twitter
-      %a{href: "https://www.facebook.com/ThoughtworksLevelUp"}
-        .fa.fa-facebook
 
