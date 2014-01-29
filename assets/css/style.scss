@@ -48,7 +48,8 @@ section, footer, header {
 }
 
 .tw {
-  max-width: 300px;
+  max-width: 200px;
+  margin-top: 45px;
 }
 
 .border-line {
@@ -290,10 +291,11 @@ section#testimonials {
 #beard {
   .mascot {
     margin-bottom: 50px;
+    max-width: 200px;
   }
 
   .social-links {
-    font-size: 3em;
+    margin: 15px auto;
 
     a {
       padding: 0 15px;
