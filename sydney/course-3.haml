@@ -25,7 +25,7 @@ layout: default
 
       .form-group
         %label Last Name
-        %input{name: "email", placeholder: "Your Surname"}
+        %input{name: "surname", placeholder: "Your Surname"}
 
       .form-group
         %label Email
@@ -43,14 +43,21 @@ layout: default
         %input.button{type: "submit", value: "Register"}
 
   %section#schedule
-    %h2 LevelUp Kickoff Schedule
+    %h2 Course Timeline
+
+    .border-line
+
+    .clearfix
+
+  %section#schedule
+    %h2 Kickoff Day Agenda
 
     .border-line
 
     .talk
       .left
         .time 9.00AM
-        %img{src: "/assets/man.jpg"}
+        %img{src: "/assets/breakfast.jpg"}
       .right
         %h3.title Breakfast and an icebreaker
         %h5.presenter Everyone
@@ -64,7 +71,7 @@ layout: default
     .talk
       .left
         .time 9:30AM
-        %img{src: "/assets/tholang.jpg"}
+        %img{src: "/assets/lego.jpg"}
       .right
         %h3.title The Lego game
         %h5.presenter ThoughtWorks Sydney
@@ -125,6 +132,21 @@ layout: default
           Class aptent taciti sociosqu ad litora torquent per conubia nostra,
           per inceptos himenaeos. Nunc sodales dignissim egestas. Nulla
           facilisi. Praesent lectus nunc
+
+    .talk.last
+      .left
+        .time Rest of the evening
+        %img{src: "/assets/man.jpg"}
+      .right
+        %h3.title To the pub!
+        %h5.presenter Everyone
+        .description
+          Beer and beer Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit. Maecenas ut ligula iaculis quam auctor tincidunt eu nec mi.
+          Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+          per inceptos himenaeos. Nunc sodales dignissim egestas. Nulla
+          facilisi. Praesent lectus nunc
+
 
 
     .clearfix
