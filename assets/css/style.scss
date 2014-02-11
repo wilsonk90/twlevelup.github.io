@@ -161,7 +161,39 @@ section#photos {
   }
 }
 
-section#upcoming-events {
+section#previous-events {
+  .location {
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+
+    &.last {
+      padding-bottom: 40px;
+      margin-bottom: 40px;
+    }
+
+    .left, .right {
+      display: inline-block;
+      width: 30%;
+      vertical-align: top;
+    }
+
+    .right {
+      width: 60%;
+      text-align: left;
+    }
+
+    .title, h2 {
+      margin: 0;
+      padding: 0;
+    }
+
+    .event {
+      padding-bottom: 10px;
+    }
+  }
+}
+
+section#events {
   .event {
     border-left: 1px solid #c5c5c5;
     box-sizing: border-box;
@@ -354,7 +386,6 @@ form {
   }
 }
 
-#registration {
   #register {
     max-width: $screen-medium;
 
@@ -364,47 +395,47 @@ form {
     }
   }
 
-  section#schedule {
-    .talk {
-      padding: 20px 0;
-      border-bottom: 1px solid #ccc;
+section#schedule {
+  .talk {
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
 
-      &.last {
-        padding-bottom: 40px;
-        margin-bottom: 40px;
-      }
+    &.last {
+      padding-bottom: 40px;
+      margin-bottom: 40px;
+    }
 
-      .left, .right {
-        display: inline-block;
-        width: 30%;
-        vertical-align: top;
-      }
+    .left, .right {
+      display: inline-block;
+      width: 30%;
+      vertical-align: top;
+    }
 
-      .right {
-        width: 60%;
-        text-align: left;
-      }
+    .right {
+      width: 60%;
+      text-align: left;
+    }
 
-      img {
-        border: 1px solid #c5c5c5;
-        border-radius: 100%;
-        margin-top: 15px;
-        width: 100px;
-      }
+    img {
+      border: 1px solid #c5c5c5;
+      border-radius: 100%;
+      margin-top: 15px;
+      width: 100px;
+    }
 
-      .title, .presenter {
-        margin: 0;
-        padding: 0;
-      }
+    .title, .presenter {
+      margin: 0;
+      padding: 0;
+    }
 
-      .presenter {
-        font-weight: normal;
-        margin-bottom: 15px;
-      }
+    .presenter {
+      font-weight: normal;
+      margin-bottom: 15px;
+    }
 
-      &.break {
-        color: darkgrey;
-      }
+    &.break {
+      color: darkgrey;
     }
   }
 }
+
