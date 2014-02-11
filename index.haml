@@ -42,22 +42,6 @@ layout: default
   .border-line
 
   .event
-    %h4.location Johannesburg
-    %h5.name Levelup
-    .register
-      %a.apply.button{href: "johannesburg/exp/1.html"} Register Now
-    .date
-      11th January 2013
-
-  .event
-    %h4.location Melbourne
-    %h5.name Levelup EXP
-    .register
-      %a.apply.button{href: "#registration-page"} Register Now
-    .date
-      12th January 2013
-
-  .event
     %h4.location Sydney
     %h5.name Levelup 3
     .register
@@ -65,7 +49,24 @@ layout: default
     .date
       22nd March 2014
 
-  %img.earth-line{src: "./assets/map.png"}
+  .event
+    %h4.location Johannesburg
+    %h5.name Levelup
+    .register
+      %a.apply.finished.button{href: "/"} Finished
+    .date
+      11th January 2013
+
+  .event
+    %h4.location Melbourne
+    %h5.name Levelup EXP
+    .register
+      %a.apply.finished.button{href: "/"} Finished
+    .date
+      12th January 2013
+
+  .earth
+    %img.earth-line{src: "./assets/map.png"}
 
   %div
     %a{href: "previous-events.html"} See previous events

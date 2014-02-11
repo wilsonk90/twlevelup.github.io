@@ -241,6 +241,10 @@ section#events {
       color: white;
     }
 
+    .finished {
+      background-color: #B6B6B6;
+    }
+
     @media #{$pad-screen} {
       width: 100%;
       float: none;
