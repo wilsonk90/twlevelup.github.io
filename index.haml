@@ -16,6 +16,12 @@ layout: default
     .details
       .form-group
         %input.email{type: "email", name: "EMAIL", placeholder: "Email Address"}
+        %select{type:"drop down", name: "LOCATION"}
+          %option Sydney
+          %option Melbourne
+          %option Brisbane
+          %option Johannesburg
+      .form-group
         %input.sign-up.button.info-button{type: "submit", value: "Sign Up"}
 
 %section#about.alt
