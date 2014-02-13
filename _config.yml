@@ -2,6 +2,7 @@ name: LevelUp
 markdown: redcarpet
 safe: false
 port: 4000
+baseurl: /
 pygments: true
 destination: ./_site
 plugins: ./_plugins
