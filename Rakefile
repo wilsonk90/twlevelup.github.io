@@ -1,7 +1,7 @@
 require 'tmpdir'
 
 # Change your GitHub reponame
-GITHUB_REPONAME = "twlevelup/refresh.twlevelup.github.io"
+GITHUB_REPONAME = "twlevelup/twlevelup.github.io"
 
 desc "Generate blog files"
 task :generate do

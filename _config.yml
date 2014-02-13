@@ -2,7 +2,7 @@ name: LevelUp
 markdown: redcarpet
 safe: false
 port: 4000
-baseurl: "/refresh.twlevelup.github.io"
+baseurl: "/twlevelup.github.io"
 pygments: true
 destination: ./_site
 plugins: ./_plugins
