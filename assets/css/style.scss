@@ -454,12 +454,13 @@ section#faq {
   .questions {
     text-align: left;
     .question {
+      padding-bottom: 5px;
       font-weight: bold;
       font-size: 1em;
     }
 
     .answer {
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
   }
 }
