@@ -128,7 +128,7 @@ h1.boom {
 section#about {
   margin: 0;
   max-width: 100%;
-  padding: 20px;
+  padding: 40px;
   width: 100%;
 
   .about-content {
@@ -444,6 +444,22 @@ section#schedule {
 
     &.break {
       color: darkgrey;
+    }
+  }
+}
+
+section#faq {
+  padding: 40px;
+
+  .questions {
+    text-align: left;
+    .question {
+      font-weight: bold;
+      font-size: 1em;
+    }
+
+    .answer {
+      margin-bottom: 20px;
     }
   }
 }
