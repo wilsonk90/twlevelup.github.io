@@ -34,17 +34,42 @@ layout: default
 
       .form-group
         %label What do you like doing?
-        %select{name: "role"}
-          %option Coding
+        %select#role{name: "role"}
           %option Analysis
+          %option Coding
           %option Not sure
 
       .form-group
         %label Any special dietary requirements? 
-        %select{name: "role"}
+        %select{name: "diet"}
           %option No
           %option Vegetarian
           %option Vegan
+
+      #developer-questions.hide
+        %p If you are intending on doing development during the course, we ask that you fill out this quick questionaire on skill levels. It's just so we can help plan the teams, so don't stress.
+        
+        %h4 Please estimate your ability with: 
+        .form-group
+          %label Using the command line
+          %select{name: "command_line"}
+            %option I feel at home using it
+            %option I can get by
+            %option I struggle a little bit.
+
+        .form-group
+          %label Using source control
+          %select{name: "source_control"}
+            %option I'm used Git before
+            %option I've used SVN before
+            %option I've never used either
+
+        .form-group
+          %label Written unit tests
+          %select{name: "testing"}
+            %option I write tests regularly.
+            %option I've heard of them, but don't write them normally.
+            %option I've never heard of unit testing
 
       .form-group
         %input.button{type: "submit", value: "Register"}
@@ -150,4 +175,13 @@ layout: default
 
 
     .clearfix
+
+:javascript
+  $("#role").change(function(){ 
+    if($("#role option:selected").text() === 'Coding'){ 
+      $("#developer-questions").show();
+    } else{
+      $("#developer-questions").hide();
+    }
+  });
 

@@ -67,6 +67,10 @@ section, footer, header {
   clear: both;
 }
 
+.hide {
+  display: none;
+}
+
 .button {
   display: inline-block;
   font-weight: normal;
@@ -473,3 +477,6 @@ section#faq {
   }
 }
 
+.dev-checklist {
+  padding-left: 40px;
+}
