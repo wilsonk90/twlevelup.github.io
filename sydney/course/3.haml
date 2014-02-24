@@ -75,12 +75,14 @@ layout: default
       .form-group
         %label What do you like doing?
         %select#role{name: "role"}
-          %option Breaking other people's code (QA/Tester)
-          %option Coding
+          %option -- Please select
+          %option Business Analyst
+          %option Developer
+          %option Tester
           %option Not sure
 
       .form-group
-        %label Any special dietary requirements? 
+        %label Any special dietary requirements?
         %select{name: "diet"}
           %option No
           %option Vegetarian
@@ -88,21 +90,22 @@ layout: default
 
       #developer-questions.hide
         %p If you are intending on doing development during the course, we ask that you fill out this quick questionnaire on skill levels. It's just so we can help plan the teams, so don't stress.
-        
-        %h4 Please estimate your ability with: 
+
+        %h4 Please estimate your ability with:
         .form-group
           %label Using the command line
           %select{name: "command_line"}
             %option I feel at home using it
             %option I can get by
-            %option I struggle a little bit.
+            %option I struggle a little bit
+            %option What is a command line?
 
         .form-group
           %label Using source control
           %select{name: "source_control"}
-            %option I'm used Git before
+            %option I've used Git before
             %option I've used SVN before
-            %option I've never used either
+            %option What is source control?
 
         .form-group
           %label Written unit tests
@@ -113,8 +116,6 @@ layout: default
 
       .form-group
         %input.button{type: "submit", value: "Register"}
-
-
 
 
   %section#schedule
@@ -157,7 +158,7 @@ layout: default
       .right
         %h3.title Lunch and Product Owner presentations
         .description
-          Meet your product owners, and find out why they've hired you to help realise there next idea. 
+          Meet your product owners, and find out why they've hired you to help realise there next idea.
 
     .talk
       .left
@@ -175,7 +176,7 @@ layout: default
       .right
         %h3.title Team presentations
         .description
-          Work as a team to come up with a proposal you will present to the rest of the group. 
+          Work as a team to come up with a proposal you will present to the rest of the group.
 
     .talk.last
       .left
@@ -191,8 +192,8 @@ layout: default
     .clearfix
 
 :javascript
-  $("#role").change(function(){ 
-    if($("#role option:selected").text() === 'Coding'){ 
+  $("#role").change(function(){
+    if($("#role option:selected").text() === 'Coding (Developer)'){
       $("#developer-questions").show();
     } else{
       $("#developer-questions").hide();
