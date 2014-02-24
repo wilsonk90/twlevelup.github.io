@@ -37,7 +37,7 @@ layout: default
       .question
         What are the different roles?
       .answer
-        BA, Dev, Tester
+        Business analysts work closely with clients to help define requirements 
 
       .question
         What happens if I pick a role - am I stuck with it?
@@ -50,13 +50,8 @@ layout: default
       .answer
         I'm sure you have some awesome ideas though.
 
-      .question
-
-      .answer
-
-
   %section#register
-    %h2 Register for the course
+    %h2 Sign Up
     .border-line
 
     %form
@@ -73,7 +68,7 @@ layout: default
         %input{name: "email", placeholder: "Your Email"}
 
       .form-group
-        %label What do you like doing?
+        %label What role interests you the most?
         %select#role{name: "role"}
           %option Business Analyst
           %option Developer
@@ -81,8 +76,8 @@ layout: default
           %option Not sure
 
       .form-group
-        %label How did you hear about LevelUp 3?
-        %input{name: "reference", placeholder: "Where you heard about us"}
+        %label How did you hear about LevelUp?
+        %input{name: "reference", placeholder: "Friends, uni, other"}
 
       #developer-questions.hide
         %p If you are intending on doing development during the course, we ask that you fill out this quick questionnaire on skill levels. It's just so we can help plan the teams, so don't stress.
