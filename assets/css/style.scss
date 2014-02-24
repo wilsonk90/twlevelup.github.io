@@ -63,6 +63,15 @@ section, footer, header {
   }
 }
 
+.title {
+  h1 {
+    margin-bottom: 0
+  }
+  h2 {
+    margin-top: 0
+  }
+}
+
 .clearfix {
   clear: both;
 }
