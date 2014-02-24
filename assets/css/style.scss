@@ -452,17 +452,12 @@ section#schedule {
   }
 }
 
-section#timeline {
+section#faq {
   padding: 40px;
   max-width: $screen-medium;
   .events {
     text-align: left;
   }
-}
-
-section#faq {
-  padding: 40px;
-  max-width: $screen-medium;
   .questions {
     text-align: left;
     .question {
