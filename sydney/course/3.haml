@@ -110,8 +110,8 @@ layout: default
         .form-group
           %label Written unit tests
           %select{name: "testing"}
-            %option I write tests regularly.
-            %option I've heard of them, but don't write them normally.
+            %option I write tests regularly
+            %option I've heard of them, but don't write them normally
             %option I've never heard of unit testing
 
       .form-group
@@ -193,7 +193,7 @@ layout: default
 
 :javascript
   $("#role").change(function(){
-    if($("#role option:selected").text() === 'Coding (Developer)'){
+    if($("#role option:selected").text() === 'Developer'){
       $("#developer-questions").show();
     } else{
       $("#developer-questions").hide();
