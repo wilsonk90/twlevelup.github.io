@@ -73,26 +73,26 @@ layout: default
     %h2 Sign Up
     .border-line
 
-    %form
+    %form#sign-up{action: "http://thoughtworks.us7.list-manage.com/subscribe/post?u=e01f405fabad2dd5617122558&amp;id=18f24730a0", method: "post", name: "mc-embedded-subscribe-form"}
       .form-group
         %label First Name
-        %input{name: "email", placeholder: "Your Name"}
+        %input{name: "FNAME", placeholder: "Your Name"}
 
       .form-group
         %label Last Name
-        %input{name: "surname", placeholder: "Your Surname"}
+        %input{name: "LNAME", placeholder: "Your Surname"}
 
       .form-group
         %label Email
-        %input{name: "email", placeholder: "Your Email"}
+        %input{name: "EMAIL", placeholder: "Your Email"}
 
       .form-group
         %label What role interests you the most?
-        %select#role{name: "role"}
-          %option Business Analyst
-          %option Developer
-          %option Tester
-          %option Not sure
+        %select#role{name: "ROLE"}
+          %option{value: "Business Analyst"} Business Analyst
+          %option{value: "Developer"} Developer
+          %option{value: "Tester"} Tester
+          %option{value: "Not sure"} Not sure
 
 
       #developer-questions.hide
@@ -101,21 +101,21 @@ layout: default
         %h4 Please rate your ability in:
         .form-group
           %label Using the command line
-          %select{name: "command_line"}
-            %option What is a command line?
-            %option I can cd around, but not much more. 
-            %option There's no place like ~
+          %select{name: "DEV1"}
+            %option{value: "What is a command line?"} What is a command line?
+            %option{value: "I can cd around, but not much more."} I can cd around, but not much more.
+            %option{value: "There's no place like ~"} There's no place like ~
 
         .form-group
           %label Using source control
-          %select{name: "source_control"}
-            %option What is source control?
-            %option I understand the basics
-            %option I git init everywhere
+          %select{name: "DEV2"}
+            %option{value: "What is source control?"} What is source control?
+            %option{value: "I understand the basics"} I understand the basics
+            %option{value: "I git init everywhere"} I git init everywhere
 
       .form-group
         %label How did you hear about LevelUp?
-        %input{name: "reference", placeholder: "Friends, uni, other"}
+        %input{name: "REFERENCE", placeholder: "Friends, uni, other"}
 
       .form-group
         %input.button{type: "submit", value: "Register"}
