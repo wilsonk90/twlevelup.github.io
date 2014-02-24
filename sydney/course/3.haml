@@ -75,7 +75,6 @@ layout: default
       .form-group
         %label What do you like doing?
         %select#role{name: "role"}
-          %option -- Please select
           %option Business Analyst
           %option Developer
           %option Tester
@@ -87,6 +86,10 @@ layout: default
           %option No
           %option Vegetarian
           %option Vegan
+
+      .form-group
+        %label How did you hear about LevelUp 3?
+        %input{name: "reference", placeholder: "Where you heard about us"}
 
       #developer-questions.hide
         %p If you are intending on doing development during the course, we ask that you fill out this quick questionnaire on skill levels. It's just so we can help plan the teams, so don't stress.
