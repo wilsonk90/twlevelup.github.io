@@ -462,7 +462,8 @@ section#schedule {
 }
 
 section#faq {
-  padding: 40px;
+  padding: 0px 40px 0px 40px;
+
   max-width: $screen-medium;
   .events {
     text-align: left;
