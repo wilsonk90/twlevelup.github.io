@@ -79,7 +79,7 @@ layout: default
           %option Developer
           %option Tester
           %option Not sure
-          
+
       .form-group
         %label How did you hear about LevelUp 3?
         %input{name: "reference", placeholder: "Where you heard about us"}
@@ -91,24 +91,22 @@ layout: default
         .form-group
           %label Using the command line
           %select{name: "command_line"}
-            %option I feel at home using it
-            %option I can get by
-            %option I struggle a little bit
             %option What is a command line?
+            %option I can get by
+            %option I feel at home using it
 
         .form-group
           %label Using source control
           %select{name: "source_control"}
-            %option I've used Git before
-            %option I've used SVN before
             %option What is source control?
+            %option I've used Git, SVN etc. before
 
         .form-group
           %label Written unit tests
           %select{name: "testing"}
-            %option I write tests regularly
-            %option I've heard of them, but don't write them normally
             %option I've never heard of unit testing
+            %option I've heard of them, but don't write them normally
+            %option I write tests regularly
 
       .form-group
         %input.button{type: "submit", value: "Register"}
